@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# Currency Swap UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern currency swap interface built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+The application allows users to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- View available token balances
+- Swap between different currencies
+- Simulate swap transactions
+- Experience smooth animations and responsive UI interactions
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- TailwindCSS
+- Framer Motion
+- Lucide React
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Token balance management
+- Swap direction toggle
+- Animated UI interactions
+- Responsive design
+- Mock transaction confirmation flow
+- Dynamic token icons
+- Loading states and validations
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## API
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Token prices are fetched from:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```txt
+https://interview.switcheo.com/prices.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Token icons are loaded from:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```txt
+https://github.com/Switcheo/token-icons
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+# Getting Started
+
+## Install dependencies
+
+### Using npm
+
+```bash
+npm install
+```
+
+### Using yarn
+
+```bash
+yarn
+```
+
+---
+
+# Run Development Server
+
+### Using npm
+
+```bash
+npm run dev
+```
+
+### Using yarn
+
+```bash
+yarn dev
+```
+
+---
+
+# Build Project
+
+### Using npm
+
+```bash
+npm run build
+```
+
+### Using yarn
+
+```bash
+yarn build
+```
+
+---
+
+# Preview Production Build
+
+### Using npm
+
+```bash
+npm run preview
+```
+
+### Using yarn
+
+```bash
+yarn preview
 ```
